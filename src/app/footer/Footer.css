@@ -1,0 +1,151 @@
+.footer {
+    background-color: #5f5d5d;
+}
+
+.footer-section {
+    margin: 0 auto;
+    width: 86%;
+    display: flex;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.info-item {
+    height: 100px;
+    position: relative;
+}
+
+.info-icons {
+    color: white;
+    margin-right: 20px;
+    transform: scale(2);
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.item-text {
+    margin-left: 60px;
+}
+
+.item-text p {
+    font-size: 1.2rem
+}
+
+.info-item a {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.info-item a:hover {
+    color: #c9ccce;
+}
+
+.info-item p {
+    color: #83cad0;
+}
+
+.license {
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.about-bank {
+    margin-left: 10%;
+}
+
+.about-header {
+    color: #83cad0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-item {
+    margin-bottom: 5px;
+}
+
+.about-item a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.about-item a:hover {
+    color: #b9c1c6;
+}
+
+.about-card {
+    margin-right: 10%;
+}
+
+.social-media {
+    width: 86%;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-navigation {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.social-media-item {
+    margin-right: 20px;
+    width: 38px;
+    height: 38px;
+    background-size: 160px;
+    border-radius: 50%;
+}
+
+.social-media-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.social-media-item:nth-child(1) {
+    background-image: url("./social_icon.jpg");
+    background-position: -108px -14px;
+}
+
+.social-media-item:nth-child(2) {
+    background-image: url("./social_icon.jpg");
+    background-position: -175px -14px;
+}
+
+.social-media-item:nth-child(3) {
+    background-image: url("./social_icon.jpg");
+    background-position: -221px -14px;
+}
+
+.social-media-item:nth-child(4) {
+    background-image: url("./social_icon.jpg");
+    background-position: -221px -61px;
+}
+
+.social-media-item:nth-child(5) {
+    background-image: url("./social_icon.jpg");
+    background-position: -107px -60px;
+}
+
+.social-media-item:hover {
+    opacity: 0.7;
+}
+
+
+.rights-reserved {
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 3px;
+}

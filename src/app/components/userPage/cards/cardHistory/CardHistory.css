@@ -1,0 +1,72 @@
+.card_history {
+    margin-top: 2rem;
+    box-shadow:
+        0 0.275rem 0.75rem -0.0625rem rgb(11 15 25 / 9%),
+        0 0.125rem 0.4rem -0.0625rem rgb(11 15 25 / 6%);
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(238, 245, 245, 0.938);
+    max-height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.card_history-date {
+    width: 25%;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #535353;
+    padding: 0.2rem 0;
+    align-self: center;
+}
+
+.card_history-item {
+    width: 100% -4rem;
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+}
+
+.card_history-item:first-child {
+    margin-top: 2rem;
+}
+
+.card_history-icon {
+    align-self: center;
+}
+
+.history-icons {
+    font-size: 2.6rem;
+    margin-right: 1rem;
+    color: rgb(14, 211, 211);
+    margin-top: 2px;
+}
+
+.card_history-details {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.card-details-name {
+    font-size: 1.5rem;
+    color: #535353;
+}
+
+.card-details-description {
+    font-size: 1.3rem;
+    color: #737171;
+}
+
+.card-details-amount {
+    font-size: 1.5rem;
+    width: 30%;
+    color: rgb(14, 211, 211);
+    align-self: center;
+}

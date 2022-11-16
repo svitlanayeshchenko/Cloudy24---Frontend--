@@ -1,0 +1,84 @@
+.charity {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.charity-header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #545454;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-info {
+    width: 80%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.form-info #amount {
+    margin-top: 1rem;
+}
+
+.btn-charity {
+    width: 40%;
+    height: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    border: none;
+    background-color: #36b7c3;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.btn-charity:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 0 2px #36b7c3 inset, 0 0 0 4px white inset;
+    cursor: pointer;
+}
+
+.form-info input {
+    width: 100%;
+    color: #7a7979;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-bottom: solid 2px #7a7979;
+}
+
+.form-info input::-webkit-input-placeholder {
+    opacity: 0.6;
+}
+
+.form-info input::-moz-placeholder {
+    opacity: 0.6;
+}
+
+.form-info input:-moz-placeholder {
+    opacity: 0.6;
+}
+
+.form-info input:-ms-input-placeholder {
+    opacity: 0.6;
+}
+
+.form-info input:focus {
+    border: none;
+    border-bottom: solid 2px #7a7979;
+    color: #545454;
+    outline: none;
+}
+
+.charity-funds {
+    display: flex;
+    flex-direction: row;
+}

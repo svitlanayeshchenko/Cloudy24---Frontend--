@@ -1,0 +1,126 @@
+.under-construction {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.under-construction-section {
+    width: 70%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #efeded;
+    border-radius: 15px;
+    box-shadow: 
+    0 0.275rem 0.75rem -0.0625rem rgba(11, 22, 25, 0.09), 
+    0 0.125rem 0.4rem -0.0625rem rgb(11 15 25 / 3%);
+    border: 3px solid #d4d4d4;
+}
+
+.under-construction-section-top {
+    font-size: 1.4rem;
+    color: #545454;
+    align-self: center;
+    padding: 1rem;
+}
+
+.under-construction-section-bottom {
+    font-size: 1.4rem;
+    color: #545454;
+    text-align: center;
+    padding: 1rem;
+}
+
+.under-construction-section-loader {
+    width: 4.3em;
+    height: 9.8em;
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    animation: rotating 4s linear infinite;
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes rotating {
+    0%, 90% {
+        transform: rotate(0);
+    }
+    
+    100% {
+        transform: rotate(0.5turn);
+    }
+}
+
+.under-construction-section-loader::after {
+    content: '';
+    position: absolute;
+    width: 0.2em;
+    height: 3.3em;
+    background-color: deepskyblue;
+    animation: flow 4s linear infinite;
+}
+
+@keyframes flow {
+    10%, 100% {
+        transform: translateY(3.2em);
+    }
+}
+
+.section-loader-top,
+.section-loader-bottom {
+    width: 3.5em;
+    height: 3.5em;
+    border-style: solid;
+    border-color: rgb(82, 81, 80);
+    border-width: 0.2em 0.2em 0.6em 0.6em;
+    border-radius: 50% 100% 50% 30%;
+    overflow: hidden;
+}
+
+.section-loader-top {
+    transform: rotate(-45deg);
+}
+
+.section-loader-bottom {
+    transform: rotate(135deg);
+}
+
+.section-loader-top::before,
+.section-loader-bottom::before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: deepskyblue;
+    animation: 4s linear infinite;
+}
+
+.section-loader-top::before {
+    border-radius: 0 100% 0 0;
+    animation-name: drop-sand;
+}
+
+@keyframes drop-sand {
+    to {
+        transform: translate(-3.2em, 2em);
+    }
+}
+
+.section-loader-bottom::before {
+    border-radius: 0 0 0 35%;
+    transform: translate(1.4em, -2.6em);
+    animation-name: fill-sand;
+}
+
+@keyframes fill-sand {
+    to {
+        transform: translate(0, 0);
+    }
+}
+
