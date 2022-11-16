@@ -1,5 +1,6 @@
 # Cloudy24 - Online banking
 The topic of the diploma project is online banking emulation - CloudyBank24.
+Link to Website Cloudy24: https://svitlana_y.gitlab.io/cloudy24-frontend
 
 # Technologies: 
  * HTML
@@ -29,5 +30,3 @@ Some sections of web site are still under development and will be supplemented w
 Online banking uses API from progect "Cloudy24--Backend--" https://github.com/svitlanachorna/Cloudy24---Backend--
 
 Frontend part hosted on Gitlab, Backend part hosted on Heroku.
-Link to Website Cloudy24: https://svitlana_y.gitlab.io/cloudy24-frontend
-
