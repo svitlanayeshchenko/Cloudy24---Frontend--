@@ -26,8 +26,8 @@ The user page has the following sections:
   
 Some sections of web site are still under development and will be supplemented with additional functions.
 
-Online banking uses API from progect "Cloudy24--Backend--". 
+Online banking uses API from progect "Cloudy24--Backend--" https://github.com/svitlanachorna/Cloudy24---Backend--
 
 Frontend part hosted on Gitlab, Backend part hosted on Heroku.
-Link to Website Cloudy24: 
+Link to Website Cloudy24: https://svitlana_y.gitlab.io/cloudy24-frontend
 
