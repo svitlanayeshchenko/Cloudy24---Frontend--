@@ -1,5 +1,4 @@
-import './Loans.css';
-import React, { Component } from 'react';
+import React from 'react';
 import UnderConstruction from '../underConstruction/UnderConstruction';
 
 function Loans() {
@@ -9,5 +8,5 @@ function Loans() {
     </div>
   );
 }
-
+ 
 export default Loans;

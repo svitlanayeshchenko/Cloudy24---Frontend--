@@ -6,7 +6,6 @@ import fond02 from './charityImg/fond02.png';
 import fond03 from './charityImg/fond03.png';
 import fond04 from './charityImg/fond04.png';
 import RadioButtons from '../../radioButtons/RadioButtons';
-import appconfig from '../../../appconfig.json';
 import React, { Component } from 'react';
 
 class Charity extends Component {
@@ -50,11 +49,10 @@ class Charity extends Component {
   }
 
   componentDidMount() {
-    
   }
 
   async doCharity(fromNumber, amount, currency, description, operationType) {
-    return fetch(`${appconfig.API_URL}/card/withdraw?cardNumber=${fromNumber}&amount=${amount}&targetCurrency=${currency}&description=${description}&operationType=${operationType}`, {
+    return fetch(`${process.env.REACT_APP_API_URL}/card/withdraw?cardNumber=${fromNumber}&amount=${amount}&targetCurrency=${currency}&description=${description}&operationType=${operationType}`, {
       method: 'POST'
     })
       .then(data => data);
@@ -71,7 +69,7 @@ class Charity extends Component {
       }
     });
 
-    if(amount === "0" || amount === "" || description === undefined) {
+    if (amount === "0" || amount === "" || description === undefined) {
       alert('Something went wrong! Charity was unsuccessful');
       return;
     }
@@ -106,4 +104,5 @@ class Charity extends Component {
     );
   }
 }
+
 export default Charity;

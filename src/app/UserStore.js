@@ -37,7 +37,7 @@ const userStore = create(set => ({
 
         if (value >= cards_length) {
             value = 0;
-        } else if(value < 0) {
+        } else if (value < 0) {
             value = cards_length - 1;
         }
 

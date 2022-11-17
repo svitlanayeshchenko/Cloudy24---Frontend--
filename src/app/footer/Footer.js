@@ -28,7 +28,6 @@ function Footer() {
                 <p>Для питаннь та пропозицій</p>
               </div>
             </div>
-
             <ul className="social-navigation">
               <li className="social-media-item"><a href="#"></a></li>
               <li className="social-media-item"><a href="#"></a></li>
@@ -47,7 +46,6 @@ function Footer() {
               <li className="about-item"><a href="#">Блог</a></li>
               <li className="about-item"><a href="#">Умови та правила</a></li>
             </ul>
-
           </div>
           <div className="about-card">
             <div className="about-header">Картка</div>

@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import Home from './components/home/Home';
@@ -6,19 +5,23 @@ import Login from './components/login/Login';
 import UserPage from './components/userPage/UserPage';
 import Cards from './components/userPage/cards/Cards';
 import Transfers from './components/userPage/transfers/Transfers';
+import Charity from './components/userPage/charity/Charity';
 import Loans from './components/userPage/loans/Loans';
 import Deposits from './components/userPage/deposits/Deposits';
 import Payments from './components/userPage/payments/Payments';
-import Charity from './components/userPage/charity/Charity';
-import CurrencyExchange from './components/userPage/currencyExchange/CurrencyExchange';
+import UserSettings from './components/userPage/uгserSettings/UserSettings';
 import ModalWindow from './modalWindow/ModalWindow';
+import PromoMenuCards from './components/promoMenuCards/PromoMenuCards';
+import PromoMenuDeposits from './components/promoMenuDeposits/PromoMenuDeposits';
+import PromoInternationalTransfers from './components/promoInternationalTransfers/PromoInternationalTransfers';
+import PromoBonds from './components/promoBonds/PromoBonds';
+import PromoIndEntrepreneur from './components/promoIndEntrepreneur/PromoIndEntrepreneur';
 import Exit from './components/userPage/exit/Exit';
-
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React, { Component } from 'react';
+import React from 'react';
 
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -26,19 +29,24 @@ function App() {
         <Header />
         <div className="routes">
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/user-page' element={<UserPage />} >
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/`} element={<Home />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/login`} element={<Login />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/user-page`} element={<UserPage />} >
               <Route path="" element={<Cards />} />
               <Route path="cards" element={<Cards />} />
               <Route path="transfers" element={<Transfers />} />
+              <Route path="charity" element={<Charity />} />
               <Route path="loans" element={<Loans />} />
               <Route path="deposits" element={<Deposits />} />
               <Route path="payments" element={<Payments />} />
-              <Route path="charity" element={<Charity />} />
-              <Route path="currency-exchange" element={<CurrencyExchange />} />
+              <Route path="settings" element={<UserSettings />} />
               <Route path="exit" element={<Exit />} />
             </Route>
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_cards`} element={<PromoMenuCards />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_deposits`} element={<PromoMenuDeposits />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_international-transfers`} element={<PromoInternationalTransfers />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_bonds`} element={<PromoBonds />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_ind-entrepreneur`} element={<PromoIndEntrepreneur />} />
           </Routes>
         </div>
         <Footer />

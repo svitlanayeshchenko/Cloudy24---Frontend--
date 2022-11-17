@@ -1,0 +1,17 @@
+.promo-bonds {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("../home/img/phone-background.png");
+    background-size: cover;
+}
+
+.under-development {
+    height: 15%;
+    text-align: center;
+    font-size: 2.8rem;
+    color: #545454;
+    font-weight: 600;
+    padding-top: 2.2rem;
+}

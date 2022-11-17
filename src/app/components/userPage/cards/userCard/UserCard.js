@@ -8,6 +8,15 @@ class UserCard extends Component {
     constructor(props) {
         super(props);
         this.card = props.cardInfo;
+
+        this.cardTypeBackground = {
+            CLOUDY: "cloudyCardBackground",
+            ЧОРНА: "blackCardBackground",
+            PLATINUM: "platinumCardBackground",
+            БІЛА: "whiteCardBackground",
+            ДИТЯЧА: "kidsCardBackground",
+            єПІДТРИМКА: "epidtrumkaCardBackground",
+        };
     }
 
     render() {
@@ -36,14 +45,15 @@ class UserCard extends Component {
         const expiresEndYear = (new Date(expiresEndEpoc * 1000)).getFullYear().toString();
         const shortYear = `${expiresEndYear[2]}${expiresEndYear[3]}`;
         const shortMonth = expiresEndMonth.length === 1 ? `0${expiresEndMonth}` : expiresEndMonth;
+        const cardBackground = this.cardTypeBackground[this.card[0].name];
 
         return (
-            <div className="bank-card">
+            <div className={`bank-card ${cardBackground}`}>
                 <div className="bank-card__title">
                     <div className="bank-card__type">world debit</div>
                     <div className="bank-card__title-logo">
                         <div><img src={card_logo} alt="logo" className="logo-card" /></div>
-                        <div>CloudyBank</div>
+                        <div className="card__title-logo-cloudy">CloudyBank</div>
                     </div>
                 </div>
                 <div className="bank-card__number">{newCardNumber}</div>

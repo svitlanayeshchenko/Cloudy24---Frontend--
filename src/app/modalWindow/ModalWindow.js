@@ -28,7 +28,7 @@ class ModalWindow extends Component {
             return (
                 <div className="grayArea" onClick={this.clickHandler}>
                     <div className="grayAreaMessage" onClick={this.clickHandler}>
-                        Наш менеджер<br />перетелефонує Вам<br />через 30 сек
+                        Наш менеджер<br />зателефонує Вам<br />через 30 секунд
                     </div>
                 </div>
             )

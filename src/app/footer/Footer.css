@@ -22,24 +22,21 @@
 
 .info-icons {
     color: white;
-    margin-right: 20px;
-    transform: scale(2);
+    font-size: calc(24px + (64 - 24) * ((100vw - 320px) / (1920 - 320)));
     position: absolute;
-    top: 15px;
-    left: 10px;
 }
 
 .item-text {
-    margin-left: 60px;
+    margin-left: calc(40px + (90 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .item-text p {
-    font-size: 1.2rem
+    font-size: calc(16px + (19.2 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .info-item a {
     color: white;
-    font-size: 1.3rem;
+    font-size: calc(18px + (20.8 - 18) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .info-item a:hover {
@@ -50,21 +47,14 @@
     color: #83cad0;
 }
 
-.license {
-    color: white;
-    font-size: 0.8rem;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
 .about-bank {
-    margin-left: 10%;
+    margin-left: 10px;
 }
 
 .about-header {
     color: #83cad0;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: calc(18px + (20.8 - 18) * ((100vw - 320px) / (1920 - 320)));
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -75,7 +65,7 @@
 
 .about-item a {
     color: white;
-    font-size: 1.2rem;
+    font-size: calc(16px + (19.2 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .about-item a:hover {
@@ -86,13 +76,6 @@
     margin-right: 10%;
 }
 
-.social-media {
-    width: 86%;
-    margin: 20px auto 0;
-    display: flex;
-    justify-content: space-between;
-}
-
 .social-navigation {
     display: flex;
     margin-top: 20px;
@@ -100,7 +83,7 @@
 }
 
 .social-media-item {
-    margin-right: 20px;
+    margin-right: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
     width: 38px;
     height: 38px;
     background-size: 160px;
@@ -142,10 +125,89 @@
     opacity: 0.7;
 }
 
-
 .rights-reserved {
     color: white;
-    font-size: 0.8rem;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
     text-align: center;
     padding-bottom: 3px;
+}
+
+
+/* -------- @MEDIA -------- */
+
+
+@media screen and (min-width: 300px) and (max-width: 824px) {
+    
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-text {
+        margin-left: calc(32px + (60 - 32) * ((100vw - 320px) / (824 - 320)));
+    }
+
+
+    .info-icons {
+        font-size: calc(22px + (42 - 22) * ((100vw - 320px) / (824 - 320)));
+        padding-top: 7px;
+    }
+
+    .item-text p {
+        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (824 - 320)));
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        height: calc(500px + (550 - 500) * ((100vw - 320px) / (824 - 320)));
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .info-item {
+        height: 32%;
+        width: 90%;
+        margin-left: calc(0px + (220 - 0) * ((100vw - 320px) / (824 - 320)));
+    }
+
+    .info-item a {
+        font-size: calc(22px + (30 - 22) * ((100vw - 320px) / (824 - 320)));
+    }
+
+    .about-bank {
+        margin-bottom: 2rem;
+        margin-left: 0px;
+        width: 90%;
+        padding-left: calc(0px + (220 - 0) * ((100vw - 320px) / (824 - 320)));
+    }
+
+    .about-card {
+        margin-bottom: 2rem;
+        margin-right: 0;
+        width: 90%;
+        padding-left: calc(0px + (220 - 0) * ((100vw - 320px) / (824 - 320)));
+
+    }
+
+    .about-header {
+        font-size: calc(26px + (36 - 26) * ((100vw - 320px) / (824 - 320)));
+        margin-bottom: 10px;
+    }
+
+    .about-item a {
+        font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (824 - 320)));
+    }
+
+    .social-navigation {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .social-media-item {
+        margin-right: calc(10px + (120 - 10) * ((100vw - 320px) / (1920 - 320)));
+    }
 }

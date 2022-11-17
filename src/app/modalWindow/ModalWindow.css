@@ -1,11 +1,10 @@
 .grayArea {
     background-color: #000000c1;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     position: absolute;
     z-index: 1000;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -24,8 +23,22 @@
     border: 2px solid #36b7c3;
     font-weight: 600;
     box-shadow: 0 0 0 2px white inset, 0 0 0 4px #36b7c3;
+    margin-top: 250px;
 }
 
 .grayArea-not-visible {
     display: none;
+}
+
+
+/* -------- @MEDIA -------- */
+
+
+@media screen and (max-width: 577px) {
+    
+    .grayAreaMessage {
+        width: 80vw;
+        height: 12rem;
+        font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (577 - 320)));
+    }
 }

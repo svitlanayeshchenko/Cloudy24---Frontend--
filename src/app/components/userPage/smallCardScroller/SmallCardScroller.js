@@ -1,5 +1,4 @@
 import './SmallCardScroller.css';
-import userStore from '../../../UserStore';
 import master_card from './master_card.png';
 import React, { Component } from 'react';
 
@@ -55,7 +54,7 @@ class SmallCardScroller extends Component {
     if ("custom" in this.currentCard) {
       return (
         <div className="small-card-scroller">
-          <div><input className="prev but-prev" type="button" value="&lt;" onClick={this.clickPrevious}/></div>
+          <div><input className="prev but-prev" type="button" value="&lt;" onClick={this.clickPrevious} /></div>
           <div className="card-scroller-info">
             <div className="card-info-icon">
               <div className="icon-mastercard">
@@ -70,7 +69,7 @@ class SmallCardScroller extends Component {
             </div>
           </div>
           <div>
-            <input className="next but-next" type="button" value="&gt;" onClick={this.clickNext}/></div>
+            <input className="next but-next" type="button" value="&gt;" onClick={this.clickNext} /></div>
 
         </div>
       );
@@ -78,7 +77,7 @@ class SmallCardScroller extends Component {
 
     return (
       <div className="small-card-scroller">
-        <div><input className="prev but-prev" type="button" value="&lt;" onClick={this.clickPrevious}/></div>
+        <div><input className="prev but-prev" type="button" value="&lt;" onClick={this.clickPrevious} /></div>
         <div className="card-scroller-info">
           <div className="card-info-icon">
             <div className="icon-mastercard">
@@ -90,12 +89,11 @@ class SmallCardScroller extends Component {
             <div className="card-info-balance">{this.currentCard.balance} {this.currentCard.currency}</div>
           </div>
         </div>
-        <div><input className="next but-next" type="button" value="&gt;" onClick={this.clickNext}/></div>
+        <div><input className="next but-next" type="button" value="&gt;" onClick={this.clickNext} /></div>
 
       </div>
     );
   }
 }
-
 
 export default SmallCardScroller;

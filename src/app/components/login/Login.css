@@ -1,8 +1,10 @@
 .login-section {
-    background-color: #93e8ef;
-    height: 80vh;
+    background-image: url("./login_background.png");
+    /* background-color: #87e7f0; */
+    background-size: cover;
+    height: 85vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -73,7 +75,7 @@
     border-radius: 10px;
     color: white;
     font-size: 1.1em;
-    padding-top: 2px;
+    padding-top: 3px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -89,20 +91,72 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
-.registration-btn {
+.left-login {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    flex-direction: column;
 }
 
-.registration-btn a {
+.right-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-users-card {
+    background-color: rgba(255, 255, 255, 0.523);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #7d7c7c;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.879);
+}
+
+.login-users-card span {
     color: #545454;
-    font-size: 0.9rem;
-    font-weight: 600;
 }
 
-.registration-btn a:hover {
-    opacity: 0.8;
+
+/* ----------   @MEDIA   ---------- */
+
+@media screen and (max-width: 455px) {
+    .login-section {
+        flex-direction: column;
+        height: 115vh;
+    }
+
+    .login-navigation label {
+        width: calc(52px + (72 - 52) * ((100vw - 320px) / (455 - 320)));
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (455 - 320)));
+    }
+
+    .login-navigation input[type=text],
+    .login-navigation input[type=password] {
+        font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (455 - 320)));
+        width: 80%;
+    }
+}
+
+
+@media screen and (min-width: 455px) and (max-width: 915px) {
+
+    .login-section {
+        flex-direction: column;
+        height: 115vh;
+    }
+
+    .login-navigation label {
+        width: calc(52px + (72 - 52) * ((100vw - 320px) / (455 - 320)));
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (455 - 320)));
+    }
+
+    .login-navigation input[type=text],
+    .login-navigation input[type=password] {
+        font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (455 - 320)));
+        width: 80%;
+    }
 }

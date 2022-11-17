@@ -7,7 +7,7 @@
 }
 
 .charity-header {
-    font-size: 1.8rem;
+    font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
     font-weight: bold;
     color: #545454;
     justify-content: center;
@@ -36,7 +36,7 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     color: white;
-    font-size: 1.2em;
+    font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
 }
 
@@ -49,7 +49,7 @@
 .form-info input {
     width: 100%;
     color: #7a7979;
-    font-size: 1.5rem;
+    font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 600;
     border: none;
     border-bottom: solid 2px #7a7979;
@@ -81,4 +81,13 @@
 .charity-funds {
     display: flex;
     flex-direction: row;
+}
+
+/* -------- @MEDIA -------- */
+
+@media screen and (min-width: 300px) and (max-width: 825px) {
+
+    .btn-charity {
+        width: 65%;
+    }
 }

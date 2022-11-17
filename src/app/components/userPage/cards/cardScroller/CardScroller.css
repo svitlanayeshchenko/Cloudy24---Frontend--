@@ -1,16 +1,23 @@
 .card-scroller {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
-    box-shadow: 
-    0 0.275rem 0.75rem -0.0625rem rgba(11, 22, 25, 0.09), 
-    0 0.125rem 0.4rem -0.0625rem rgb(11 15 25 / 3%);
+    box-shadow:
+        0 0.275rem 0.75rem -0.0625rem rgba(11, 22, 25, 0.09),
+        0 0.125rem 0.4rem -0.0625rem rgb(11 15 25 / 3%);
     border-radius: 15px;
     margin-top: 1rem;
     background-color: rgba(238, 245, 245, 0.938);
 }
 
-.prev, .next {
+.card-andbuttons-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.prev,
+.next {
     width: 1.5rem;
     height: 3rem;
     border-radius: 5px;
@@ -28,16 +35,15 @@
     margin-right: 2rem;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     opacity: 0.9;
     cursor: pointer;
 }
 
 .card-info {
     margin-right: 2rem;
-    width: 47%;
     align-items: center;
-    
 }
 
 .card-balance {
@@ -57,4 +63,82 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-shadow: 2px 2px 2px rgb(206, 211, 212);
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 620px) {
+
+    .card-scroller {
+        flex-direction: column;
+        
+    }
+
+    .card-andbuttons-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .credit-item-name {
+        font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (620 - 320)));
+        margin-bottom: 20px;
+    }
+
+    .card-balance {
+        font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (620 - 320)));
+        margin-bottom: 1rem;
+    }
+
+    .prev,
+    .next {
+        width: calc(16px + (24 - 16) * ((100vw - 320px) / (620 - 320)));
+
+    }
+
+    .b-prev {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .b-next {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card-info {
+        margin-left: 10%;
+    }
+}
+
+
+@media screen and (min-width: 620px) and (max-width: 1260px) {
+
+    .card-scroller {
+        flex-direction: column;
+    }
+
+    .credit-item-name {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .card-info {
+        margin-left: 5%;
+    }
+
+}
+
+
+@media screen and (min-width: 1260px) and (max-width: 1450px) {
+
+    .card-balance {
+        font-size: 2.7rem;
+    }
+
+    .credit-item-name {
+        font-size: 1.3rem;
+    }
+
+    .card-info {
+        margin-left: 0;
+    }
 }

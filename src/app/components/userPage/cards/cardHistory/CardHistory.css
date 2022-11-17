@@ -8,9 +8,14 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(238, 245, 245, 0.938);
-    max-height: 50vh;
+    max-height: 60vh;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.card-block-description {
+    width: 60%;
+    display: flex;
 }
 
 .card_history-date {
@@ -20,10 +25,11 @@
     color: #535353;
     padding: 0.2rem 0;
     align-self: center;
+    text-align: end;
 }
 
 .card_history-item {
-    width: 100% -4rem;
+    width: 100% - 4rem;
     display: flex;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -50,8 +56,9 @@
 
 .card_history-details {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    width: 45%;
+    padding-right: 20px;
 }
 
 .card-details-name {
@@ -66,7 +73,137 @@
 
 .card-details-amount {
     font-size: 1.5rem;
-    width: 30%;
+    width: 15%;
     color: rgb(14, 211, 211);
     align-self: center;
+    padding-right: 20px;
+}
+
+
+/* -------- @MEDIA -------- */
+
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+
+    .card_history-item {
+        flex-direction: column;
+        padding: 4%;
+    }
+
+    .card_history {
+        max-height: 125vh;
+    }
+
+    .card-block-description {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .history-icons {
+        font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (500 - 320)));
+        margin-right: 12px;
+    }
+
+    .card-details-name {
+        font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (500 - 320)));
+    }
+
+    .card-details-description {
+        font-size: calc(12px + (17 - 12) * ((100vw - 320px) / (500 - 320)));
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card-details-amount {
+        width: 100%;
+        margin-left: 30%;
+        margin-bottom: 5px;
+        font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (500 - 320)));
+    }
+
+    .card_history-date {
+        width: 100%;
+        text-align: start;
+        margin-left: 30%;
+        font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (500 - 320)));
+    }
+
+    .card_history-item {
+        width: 100% - 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+
+    }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 815px) {
+
+    .card_history-item {
+        flex-direction: column;
+    }
+
+    .card_history {
+        max-height: 135vh;
+    }
+
+    .card-block-description {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .card-details-amount {
+        width: 100%;
+        margin-left: 115px;
+        margin-bottom: 5px;
+    }
+
+    .card_history-date {
+        width: 100%;
+        text-align: start;
+        margin-left: 115px;
+    }
+}
+
+
+@media screen and (min-width: 815px) and (max-width: 930px) {
+
+    .card-details-amount {
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+
+    .card_history-date {
+        font-size: 1rem;
+    }
+
+    .card-details-description {
+        margin-right: 20px;
+    }
+}
+
+
+@media screen and (min-width: 930px) and (max-width: 1200px) {
+    
+    .history-icons {
+        font-size: 2.2rem;
+    }
+
+    .card-details-name {
+        font-size: 1.3rem;
+    }
+
+    .card-details-description {
+        font-size: 1.1rem;
+        margin-right: 20px;
+    }
+
+    .card-details-amount {
+        font-size: 1.3rem;
+        margin-right: 20px;
+    }
+
+    .card_history-date {
+        font-size: 1.1rem;
+    }
 }

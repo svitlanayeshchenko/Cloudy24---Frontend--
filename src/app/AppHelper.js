@@ -19,17 +19,19 @@ function formatDate(date) {
 };
 
 const typeTranslation = {
-        topup: "Цільові надходження",
-        payments: "Платежі",
-        mobile: "Поповнення мобільного",
-        transfer_to: "Перекази",
-        transfer_from: "Поповнення",
-        other: "Інше"
-    };
+    topup: "Цільові надходження",
+    payments: "Платежі",
+    mobile: "Поповнення мобільного",
+    charity: "Благодійність",
+    shopping: "Покупки",
+    transfer_to: "Перекази",
+    transfer_from: "Поповнення",
+    other: "Інше"
+};
 
 function getOperationTypeTranslation(type) {
 
-    if(type in typeTranslation) {
+    if (type in typeTranslation) {
         return typeTranslation[type];
     }
 
@@ -37,17 +39,19 @@ function getOperationTypeTranslation(type) {
 };
 
 const typeIcons = {
-        topup: "task_alt",
-        payments: "wallet",
-        mobile: "phone_iphone",
-        transfer_to: "keyboard_double_arrow_right",
-        transfer_from: "keyboard_double_arrow_left",
-        other: "dynamic_feed"
-    };
+    topup: "task_alt",
+    payments: "wallet",
+    mobile: "phone_iphone",
+    charity: "volunteer_activism",
+    shopping: "shopping_cart",
+    transfer_to: "keyboard_double_arrow_right",
+    transfer_from: "keyboard_double_arrow_left",
+    other: "dynamic_feed"
+};
 
 function getOperationTypeIcon(type) {
 
-    if(type in typeIcons) {
+    if (type in typeIcons) {
         return typeIcons[type];
     }
 

@@ -1,5 +1,4 @@
-import './Deposits.css';
-import React, { Component }  from 'react';
+import React from 'react';
 import UnderConstruction from '../underConstruction/UnderConstruction'
 
 function Deposits() {

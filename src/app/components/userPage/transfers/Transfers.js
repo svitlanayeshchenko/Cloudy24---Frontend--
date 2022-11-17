@@ -1,7 +1,6 @@
 import './Transfers.css';
 import userStore from '../../../UserStore';
 import SmallCardScroller from '../smallCardScroller/SmallCardScroller';
-import appconfig from '../../../appconfig.json';
 import React, { Component } from 'react';
 
 class Transfers extends Component {
@@ -22,7 +21,7 @@ class Transfers extends Component {
         this.fromCards.length = 0;
         this.toCards.length = 0;
 
-        this.toCards.push({custom: true, number: ""});
+        this.toCards.push({ custom: true, number: "" });
 
         let tempCards = JSON.parse(JSON.stringify(cards));
         tempCards.forEach(element => {
@@ -39,12 +38,10 @@ class Transfers extends Component {
   }
 
   componentDidMount() {
-    
-    
   }
 
   async doTransfer(fromNumber, toNumber, amount) {
-    return fetch(`${appconfig.API_URL}/card/transfer?sourceCardNumber=${fromNumber}&targetCardNumber=${toNumber}&amount=${amount}`, {
+    return fetch(`${process.env.REACT_APP_API_URL}/card/transfer?sourceCardNumber=${fromNumber}&targetCardNumber=${toNumber}&amount=${amount}`, {
       method: 'POST'
     })
       .then(data => data);
@@ -54,15 +51,15 @@ class Transfers extends Component {
     const fromCard = userStore.getState().fromCard;
     const toCard = userStore.getState().toCard;
     const amount = document.querySelector("#amount").value;
-    
+
     const response = await this.doTransfer(fromCard.number, toCard.number, amount);
 
     // check response 
     if (response !== null && response.status === 200) {
       // show alert
       alert("Transfer was successful");
-      window.open("http://localhost:3000/user-page/transfers", "_self");
-    } 
+      window.open(`${process.env.REACT_APP_PUBLIC_URL}/user-page/transfers`, "_self");
+    }
     else {
       // show error message
       alert('Something went wrong! Transfer was unsuccessful');
@@ -73,14 +70,14 @@ class Transfers extends Component {
     return (
       <div className="transfers">
         <div className="transfer-header">З картки</div>
-        <SmallCardScroller cards={this.fromCards} setter={userStore.getState().setFromCard}/>
+        <SmallCardScroller cards={this.fromCards} setter={userStore.getState().setFromCard} />
         <div className="transfer-header">На картку</div>
-        <SmallCardScroller cards={this.toCards} setter={userStore.getState().setToCard}/>
+        <SmallCardScroller cards={this.toCards} setter={userStore.getState().setToCard} />
         <div className="form-info">
-        <input type="text" id="amount" name="amount" placeholder="Сума" required />
+          <input type="text" id="amount" name="amount" placeholder="Сума" required />
         </div>
         <div className="form-info">
-        <input type="text" id="appointment" name="amount" placeholder="Призначення" />
+          <input type="text" id="appointment" name="amount" placeholder="Призначення" />
         </div>
         <button className="btn-transfer" type="button" onClick={this.clickBtnTransfers}>Продовжити</button>
       </div>

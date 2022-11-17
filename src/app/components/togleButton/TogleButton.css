@@ -10,6 +10,8 @@
 }
 
 .togle-button img {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     transition: 0.5s;
     border: 1px solid #9d9b9b;
@@ -27,4 +29,25 @@
 
 .togle-button-selected img:hover {
     border: 4px solid #36b7c3;
+}
+
+@media screen and (min-width: 300px) and (max-width: 760px) {
+    .togle-button {
+        width: calc(120px + (190 - 120) * ((100vw - 320px) / (760 - 320)));
+        height: calc(120px + (190 - 120) * ((100vw - 320px) / (760 - 320)));
+    } 
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 1520px) {
+
+    .togle-button {
+        width: calc(60px + (170 - 60) * ((100vw - 320px) / (1520 - 320)));
+        height: calc(60px + (170 - 60) * ((100vw - 320px) / (1520 - 320)));
+        margin: 1rem;
+    }
+
+    .togle-button img:hover {
+        transform: scale(1.2);
+    }
 }

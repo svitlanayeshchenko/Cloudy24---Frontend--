@@ -1,0 +1,299 @@
+.promo-menu-deposits {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("../home/img/phone-background.png");
+    background-size: cover;
+    padding-bottom: calc(20px + (48 - 20) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.deposits-background {
+    width: 100%;
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0.221);
+    display: flex;
+    justify-content: center;
+    padding-bottom: calc(20px + (48 - 20) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.promo-menu-deposits-section {
+    width: 86%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.deposits-section-header {
+    text-align: center;
+    font-size: calc(26px + (44 - 26) * ((100vw - 320px) / (1920 - 320)));
+    color: #545454;
+    font-weight: 600;
+    padding-top: 2.2rem;
+}
+
+.deposits-section-content {
+    /* height: 85%; */
+    display: flex;
+    flex-direction: row;
+}
+
+.deposits-section-content-left {
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 16%;
+    padding-top: 5%;
+    margin-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.content-left-header {
+    margin-bottom: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.content-header-title {
+    font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1920 - 320)));
+    color: #545454;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.content-header-description {
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    color: #545454;
+    font-weight: 600;
+}
+
+.content-left-navigation {
+    padding-top: calc(12px + (32 - 12) * ((100vw - 320px) / (1920 - 320)));
+    display: flex;
+    flex-direction: column;
+}
+
+.content-left-navigation-item {
+    display: flex;
+    flex-direction: row;
+    height: calc(85px + (96 - 85) * ((100vw - 320px) / (1920 - 320)));
+    color: #545454;
+
+}
+
+.left-navigation-item-number {
+    background-color: rgba(247, 247, 247, 0.801);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: 1rem;
+}
+
+.left-navigation-item-text {
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.content-left-input {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+}
+
+.content-left-input input {
+    border: 1px solid #B6B6B6;
+    border-radius: 10px;
+    background-color: white;
+    width: 200px;
+    height: 46px;
+    padding-left: 20px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
+    color: #ADA8A8;
+    opacity: 0.6;
+    margin-right: 20px;
+}
+
+.content-left-input input:focus {
+    outline: none;
+    border: 2px solid #ADA8A8;
+    color: #838181;
+    opacity: 0.9;
+}
+
+.promo-deposits-btn {
+    width: 210px;
+    height: 46px;
+    background-color: #36b7c3;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+}
+
+.promo-deposits-btn a {
+    color: white;
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.promo-deposits-btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px #36b7c3 inset, 0 0 0 4px white inset;
+}
+
+.deposits-section-content-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 1rem;
+}
+
+.deposits-section-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.deposits-section-img img {
+    width: calc(350px + (450 - 350) * ((100vw - 1600px) / (1920 - 1600)));
+    height: calc(627px + (806 - 627) * ((100vw - 1600px) / (1920 - 1600)));
+}
+
+.div-error-input {
+    padding-top: 8px;
+    color: rgb(237, 61, 61);
+    visibility: hidden;
+}
+
+
+/* ------------   @MEDIA   ---------- */
+
+
+@media screen and (min-width: 300px) and (max-width: 630px) {
+
+    .deposits-section-content-right {
+        display: none;
+    }
+
+    .deposits-section-content-left {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (985 - 320)));
+        padding-top: 20px;
+    }
+
+    .content-left-header,
+    .content-left-navigation {
+        margin-left: 10%;
+    }
+
+    .content-left-input {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .promo-deposits-btn {
+        margin-top: 20px;
+    }
+
+    .content-header-title {
+        font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (985 - 320)));
+    }
+
+    .content-header-description {
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (985 - 320)));
+    }
+
+    .left-navigation-item-text {
+        font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (985 - 320)));
+    }
+
+    .deposits-section-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .deposits-section-header {
+        font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (630 - 320)));
+    }
+}
+
+
+@media screen and (min-width: 630px) and (max-width: 985px) {
+
+    .deposits-section-content-right {
+        display: none;
+    }
+
+    .deposits-section-content-left {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (985 - 320)));
+        padding-top: 20px;
+    }
+
+    .content-left-header,
+    .content-left-navigation {
+        margin-left: 19%;
+    }
+
+    .content-header-title {
+        font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (985 - 320)));
+    }
+
+    .content-header-description {
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (985 - 320)));
+    }
+
+    .left-navigation-item-text {
+        font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (985 - 320)));
+    }
+
+    .deposits-section-content {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width: 985px) and (max-width: 1350px) {
+
+    .content-left-input {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .promo-deposits-btn {
+        margin-top: 20px;
+    }
+
+    .deposits-section-img img {
+        width: calc(50px + (350 - 50) * ((100vw - 320px) / (1350 - 320)));
+        height: calc(90px + (627 - 90) * ((100vw - 320px) / (1350 - 320)));
+    }
+
+    .deposits-section-content-right {
+        margin-top: calc(200px + (50 - 200) * ((100vw - 320px) / (1600 - 320)));
+    }
+}
+
+
+@media screen and (min-width: 1350px) and (max-width: 1600px) {
+
+    .deposits-section-img img {
+        width: calc(50px + (350 - 50) * ((100vw - 320px) / (1600 - 320)));
+        height: calc(90px + (627 - 90) * ((100vw - 320px) / (1600 - 320)));
+    }
+
+    .deposits-section-content-right {
+        margin-top: calc(200px + (50 - 200) * ((100vw - 320px) / (1600 - 320)));
+    }
+}

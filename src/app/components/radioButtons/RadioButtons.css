@@ -3,9 +3,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
 
-.toggle-item {
-
+@media screen and (min-width: 300px) and (max-width: 760px) {
+    .radio-buttons {
+        display: flex;
+        flex-direction: column;
+    }
 }
