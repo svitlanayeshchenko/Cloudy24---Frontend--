@@ -4,7 +4,7 @@ import UnderConstruction from '../underConstruction/UnderConstruction';
 function Loans() {
   return (
     <div className="loans">
-      <UnderConstruction section={"Кредитування"} />
+      <UnderConstruction section={"Кредити"} />
     </div>
   );
 }

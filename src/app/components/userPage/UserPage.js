@@ -92,10 +92,10 @@ class UserPage extends Component {
               <li className="user-navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/user-page/deposits`}>
                 <div className="material-icons nav-icon">redeem</div>
                 <div className="nav-text">Депозити</div></NavLink></li>
-              <li className="user-navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/user-page/payments`}>
+              <li className="user-navigation-item"><NavLink to="##">
                 <div className="material-icons nav-icon">gite</div>
                 <div className="nav-text">Комунальні платежі</div></NavLink></li>
-              <li className="user-navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/user-page/settings`}>
+              <li className="user-navigation-item"><NavLink to="##">
                 <div className="material-icons nav-icon">settings</div>
                 <div className="nav-text">Налаштування</div></NavLink></li>
               <li className="user-navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/`} onClick={this.onExitClickHandler}>

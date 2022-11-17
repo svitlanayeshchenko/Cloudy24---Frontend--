@@ -143,12 +143,12 @@ class Home extends Component {
                 *Це обов'язкове поле для заповнення
               </div>
               <div className="promo-app">
-                <div className="app-btn app_store"><a href={`${process.env.REACT_APP_PUBLIC_URL}/`}><img src={appStore}
-                  alt="google_play" /></a></div>
-                <div className="app-btn google_play"><a href={`${process.env.REACT_APP_PUBLIC_URL}/`}><img src={googlePlay}
-                  alt="gapp_store" /></a></div>
-                <div className="app-btn app_gallery"><a href={`${process.env.REACT_APP_PUBLIC_URL}/`}><img src={appGallary}
-                  alt="app_gallery" /></a></div>
+                <div className="app-btn app_store"><a href="##"><img src={appStore}
+                  alt="google_play" /> </a></div>
+                <div className="app-btn google_play"><a href="##"><img src={googlePlay}
+                  alt="gapp_store" /> </a></div>
+                <div className="app-btn app_gallery"><a href="##"><img src={appGallary}
+                  alt="app_gallery" /> </a></div>
               </div>
             </div>
           </div>
