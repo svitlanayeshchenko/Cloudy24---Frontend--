@@ -20,13 +20,10 @@ On the main page there is advertising infomation.
 On the login page there are examples of user logins and passwords.
 
 The user page has the following sections: 
-  * user cards section - shows informatuion about about cards, balacne and payments history
+  * user cards section - shows informatuion about cards, balacne and payments history
   * transfers section - allows transfer funds to cards
   * charity section - allows transfer funds to charitable organizations
-  * loans section - under construction
-  * deposits section - under construction
-  * payments section - under construction
-  * settings section -  under construction
+  * loans section, deposits section, payments section, settings section - under construction
   
 Some sections of web site are still under development and will be supplemented with additional functions.
 
