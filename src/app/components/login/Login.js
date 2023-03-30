@@ -42,6 +42,8 @@ function Login() {
     else {
       // show error message
       alert('Login or/and password are incorrect!');
+      loginPage.style.display = "flex";
+      loginPageSpinner.style.display = "none";
     }
   }
 

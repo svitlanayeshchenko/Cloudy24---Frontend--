@@ -115,10 +115,23 @@ class Home extends Component {
     } else {
       if (phoneNumber.value === undefined || phoneNumber.value === "" || phoneNumber.value === null) {
         phoneNumber.style.border = "2px solid rgb(237, 61, 61)";
+        textError.innerHTML = "*Це обов'язкове поле для заповнення";
         textError.style.visibility = "visible";
-      } else {
-        appModalStore.getState().setmodalWindowVisible(true);
       }
+      else {
+        let pattern = /\+38\d{10}/;
+        let normalizedNumber = phoneNumber.value.replaceAll(" ", "").replaceAll("-", "").replaceAll("(", "").replaceAll(")", "");
+        let phoneExist = pattern.test(normalizedNumber);
+        if (phoneExist) {
+          appModalStore.getState().setmodalWindowVisible(true);
+        }
+        else {
+          phoneNumber.style.border = "2px solid rgb(237, 61, 61)";
+          textError.innerHTML = "*Невірний формат телефону";
+          textError.style.visibility = "visible";
+        }
+      }
+      phoneNumber.value = "";
     }
   }
 
@@ -140,7 +153,6 @@ class Home extends Component {
                 <div className="promo-btn"><a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>Хочу картку</a></div>
               </div>
               <div className="div-error">
-                *Це обов'язкове поле для заповнення
               </div>
               <div className="promo-app">
                 <div className="app-btn app_store"><a href="##"><img src={appStore}

@@ -25,10 +25,23 @@ class PromoMenuDeposits extends Component {
         } else {
             if (phoneNumber.value === undefined || phoneNumber.value === "" || phoneNumber.value === null) {
                 phoneNumber.style.border = "2px solid rgb(237, 61, 61)";
+                textError.innerHTML = "*Це обов'язкове поле для заповнення";
                 textError.style.visibility = "visible";
-            } else {
-                appModalStore.getState().setmodalWindowVisible(true);
             }
+            else {
+                let pattern = /\+38\d{10}/;
+                let normalizedNumber = phoneNumber.value.replaceAll(" ", "").replaceAll("-", "").replaceAll("(", "").replaceAll(")", "");
+                let phoneExist = pattern.test(normalizedNumber);
+                if (phoneExist) {
+                    appModalStore.getState().setmodalWindowVisible(true);
+                }
+                else {
+                    phoneNumber.style.border = "2px solid rgb(237, 61, 61)";
+                    textError.innerHTML = "*Невірний формат телефону";
+                    textError.style.visibility = "visible";
+                }
+            }
+            phoneNumber.value = "";
         }
     }
 
@@ -95,7 +108,6 @@ class PromoMenuDeposits extends Component {
                                         <a href="#">Оформити депозит</a></div>
                                 </div>
                                 <div className="div-error-input">
-                                    *Це обов'язкове поле для заповнення
                                 </div>
                             </div>
                             <div className="deposits-section-content-right">
