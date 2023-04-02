@@ -9,4 +9,4 @@ function UserSettings() {
   );
 }
  
-export default UserSettings;
+export default UserSettings; 
