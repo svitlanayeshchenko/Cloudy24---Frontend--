@@ -119,11 +119,12 @@ class Home extends Component {
         textError.style.visibility = "visible";
       }
       else {
-        let pattern = /\+38\d{10}/;
+        let pattern = /\+380\d{9}/;
         let normalizedNumber = phoneNumber.value.replaceAll(" ", "").replaceAll("-", "").replaceAll("(", "").replaceAll(")", "");
         let phoneExist = pattern.test(normalizedNumber);
-        if (phoneExist) {
+        if (phoneExist && normalizedNumber.length === 13 ) {
           appModalStore.getState().setmodalWindowVisible(true);
+          phoneNumber.value = "";
         }
         else {
           phoneNumber.style.border = "2px solid rgb(237, 61, 61)";
@@ -131,7 +132,6 @@ class Home extends Component {
           textError.style.visibility = "visible";
         }
       }
-      phoneNumber.value = "";
     }
   }
 
