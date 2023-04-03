@@ -2,7 +2,6 @@ import './Login.css';
 import userStore from '../../UserStore';
 import React, { useState } from 'react';
 
-
 async function loginUser(credentials) {
 
   return fetch(`${process.env.REACT_APP_API_URL}/login`, {
@@ -21,29 +20,66 @@ function Login() {
   const loginPage = document.querySelector(".login-page-section");
   const loginPageSpinner = document.querySelector(".login-page-spinner-section");
 
+  let [...inputs] = document.querySelectorAll("input");
+
+  let inputsArray = inputs.map(function (elem) {
+    return elem;
+  }).filter((elem) => {
+    return elem.type != "submit"
+  });
+
+  const validateInputsFields = (target) => {
+    if (target.name === "input-login") {
+      return /^\+380\d{9}$/.test(target.value);
+    }
+    else if (target.name === "password-input") {
+      return /[0-9a-z]{5,}/.test(target.value);
+    }
+  }
+
+  inputsArray.map((e) => {
+    e.addEventListener("change", (event) => {
+      validateInputsFields(event.target);
+    })
+  });
+
   const handleSubmit = async e => {
     e.preventDefault();
 
     loginPage.style.display = "none";
     loginPageSpinner.style.display = "block";
 
-    const response = await loginUser({
-      phone,
-      password
+    let validateRez = inputsArray.map(function (elem) {
+      return validateInputsFields(elem);
     });
 
-    // check login 
-    if (response !== null && response.status === 200) {
-      // show user page
-      window.localStorage.setItem("userphone", phone);
-      userStore.getState().setIsUserLoggedIn(true);
-      window.open(`${process.env.REACT_APP_PUBLIC_URL}/user-page`, "_self");
+    let response;
+
+    if (!validateRez.includes(false)) {
+      response = await loginUser({
+        phone,
+        password
+      });
+
+      // check login 
+      if (response !== null && response.status === 200) {
+        // show user page
+        window.localStorage.setItem("userphone", phone);
+        userStore.getState().setIsUserLoggedIn(true);
+        window.open(`${process.env.REACT_APP_PUBLIC_URL}/user-page`, "_self");
+      }
+      else {
+        // show error message
+        alert('Невірний логін або пароль!');
+        loginPage.style.display = "flex";
+        loginPageSpinner.style.display = "none";
+      }
     }
     else {
       // show error message
-      alert('Login or/and password are incorrect!');
-      loginPage.style.display = "flex";
-      loginPageSpinner.style.display = "none";
+      alert('Невірний формат логіну або паролю!');
+        loginPage.style.display = "flex";
+        loginPageSpinner.style.display = "none";
     }
   }
 
