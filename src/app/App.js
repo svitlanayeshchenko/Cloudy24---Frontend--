@@ -13,6 +13,9 @@ import UserSettings from './components/userPage/uгserSettings/UserSettings';
 import ModalWindow from './modalWindow/ModalWindow';
 import PromoMenuCards from './components/promoMenuCards/PromoMenuCards';
 import PromoMenuDeposits from './components/promoMenuDeposits/PromoMenuDeposits';
+import PromoInternationalTransfers from './components/promoInternationalTransfers/PromoInternationalTransfers';
+import PromoBonds from './components/promoBonds/PromoBonds';
+import PromoIndEntrepreneur from './components/promoIndEntrepreneur/PromoIndEntrepreneur';
 import Exit from './components/userPage/exit/Exit';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
@@ -41,6 +44,9 @@ function App() {
             </Route>
             <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_cards`} element={<PromoMenuCards />} />
             <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo_deposits`} element={<PromoMenuDeposits />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo-international-transfers`} element={<PromoInternationalTransfers />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo-bonds`} element={<PromoBonds />} />
+            <Route path={`${process.env.REACT_APP_PUBLIC_URL}/promo-indEntrepreneur`} element={<PromoIndEntrepreneur />} />
           </Routes>
         </div>
         <Footer />
