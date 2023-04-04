@@ -41,9 +41,9 @@ class Header extends Component {
                         <ul className={appModalBurgerStore.getState().modalBurgerMenuVisible ? ["navigation", "active"].join(" ") : ["navigation"]} onClick={this.clickHandler}>
                             <li className="navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/promo_cards`}>Картки</NavLink></li>
                             <li className="navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/promo_deposits`}>Депозити</NavLink></li>
-                            <li className="navigation-item"><NavLink to="##">Міжнародні перекази</NavLink></li>
-                            <li className="navigation-item"><NavLink to="##">Облігації</NavLink></li>
-                            <li className="navigation-item"><NavLink to="##">ФОП</NavLink></li>
+                            <li className="navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/promo-international-transfers`}>Міжнародні перекази</NavLink></li>
+                            <li className="navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/promo-bonds`}>Облігації</NavLink></li>
+                            <li className="navigation-item"><NavLink to={`${process.env.REACT_APP_PUBLIC_URL}/promo-indEntrepreneur`}>ФОП</NavLink></li>
                         </ul>
                         <UserPageButton />
                         <div className="burger-button-menu">
