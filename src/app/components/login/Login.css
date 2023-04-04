@@ -191,8 +191,11 @@
 
 @media screen and (max-width: 455px) {
     .login-section {
+        height: 85vh;
+    }
+
+    .login-page-section {
         flex-direction: column;
-        height: 115vh;
     }
 
     .login-navigation label {
@@ -211,8 +214,11 @@
 @media screen and (min-width: 455px) and (max-width: 915px) {
 
     .login-section {
+        height: 100vh;
+    }
+
+    .login-page-section {
         flex-direction: column;
-        height: 115vh;
     }
 
     .login-navigation label {
