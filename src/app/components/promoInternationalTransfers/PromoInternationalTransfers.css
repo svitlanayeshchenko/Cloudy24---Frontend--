@@ -7,11 +7,12 @@
     background-size: cover;
 }
 
-.under-development {
+.under-development-transfers {
     height: 15%;
     text-align: center;
-    font-size: 2.8rem;
-    color: #545454;
     font-weight: 600;
+    color: #545454;
     padding-top: 2.2rem;
+    font-size: calc(26px + (44 - 26) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: 3rem;
 }

@@ -14,7 +14,7 @@ class PromoInternationalTransfers extends Component {
     render() {
         return (
             <div className="promo-international-transfers">
-                <div className="under-development">
+                <div className="under-development-transfers">
                     Розділ "Міжнародні перекази"<br /> знаходиться у стадії розробки
                 </div>
             </div>
