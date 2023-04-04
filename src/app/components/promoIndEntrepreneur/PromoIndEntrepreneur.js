@@ -14,7 +14,7 @@ class PromoIndEntrepreneur extends Component {
     render() {
         return (
             <div className="promo-indEntrepreneur">
-                <div className="under-development">
+                <div className="under-development-indEntrepreneur">
                     Розділ "ФОП"<br /> знаходиться у стадії розробки
                 </div>
             </div>
