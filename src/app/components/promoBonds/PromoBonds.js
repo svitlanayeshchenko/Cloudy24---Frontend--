@@ -14,7 +14,7 @@ class PromoBonds extends Component {
     render() {
         return (
             <div className="promo-bonds">
-                <div className="under-development">
+                <div className="under-development-bonds">
                     Розділ "Облігації"<br /> знаходиться у стадії розробки
                 </div>
             </div>
