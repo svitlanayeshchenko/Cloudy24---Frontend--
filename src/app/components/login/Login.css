@@ -191,11 +191,16 @@
 
 @media screen and (max-width: 455px) {
     .login-section {
-        height: 85vh;
+        height: 120vh;
     }
 
     .login-page-section {
         flex-direction: column;
+    }
+
+    .left-login,
+    .right-login {
+        margin-top: 1.5rem;
     }
 
     .login-navigation label {
@@ -214,7 +219,12 @@
 @media screen and (min-width: 455px) and (max-width: 915px) {
 
     .login-section {
-        height: 100vh;
+        height: 120vh;
+    }
+
+    .left-login,
+    .right-login {
+        margin-top: 1.5rem;
     }
 
     .login-page-section {
